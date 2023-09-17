@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canlas Rafael</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="index.html" class="logo"><img src="IMAGES/Dino.jpg" class ="logo"></a>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               
+            </ul>
+            
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Who is <br> <span>Rafael Canlas</span></h2>
+                <p>Hi, I'm Rafael Luis Canlas, and I'm on the path to becoming a computer engineer. 
+                    I love all things tech and am passionate about making cool stuff with computers. I'm here to learn, innovate, and create a better digital world for everyone</p>
+                <a href="#moree">More about me</a>
+        </div>
+        <div class="imgBox">
+            <img src="IMAGES/chigger.png" class="Rafael">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="IMAGES/chigger.png" onclick="imgSlider('IMAGES/chigger.png');changeCircleColor('#738054')"></li>
+        <li><img src="IMAGES/chigger4.png" onclick="imgSlider('IMAGES/chigger4.png'),changeCircleColor('#779768')"></li>
+        <li><img src="IMAGES/chigger3.png" onclick="imgSlider('IMAGES/chigger3.png'),changeCircleColor('#806b54')"></li>
+    </ul>
+    
+    
+    <ul class="soc">
+        <li><a href="https://www.facebook.com/rafael.l.canlas" target="_blank"><img src="IMAGES/iconfb.png"></a></li>
+        <li><a href="https://www.tiktok.com/@rluiscanlas" target="_blank"><img src="IMAGES/icontt.png"></a></li>
+        <li><a href="https://www.instagram.com/rluiscanlas/" target="_blank"><img src="IMAGES/iconinsta.png"></a></li>
+    </ul>
+    
+    </section>
+
+    <h1 id="moree"><iframe id="moreIframe" src="more.html" frameborder="0" scrolling="no" width="100%" height="900"></iframe>
+</h1>
+
+
+<script>
+    function adjustIframeHeight() {
+        var iframe = document.getElementById("moreIframe");
+        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        var contentHeight = Math.max(
+            innerDoc.body.scrollHeight,
+            innerDoc.documentElement.scrollHeight
+        );
+        iframe.style.height = contentHeight + "px";
+    }
+
+    // Call the function when the iframe content is loaded and whenever the window is resized
+    window.onload = adjustIframeHeight;
+    window.onresize = adjustIframeHeight;
+</script>
+
+
+
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+        document.querySelector('.Rafael').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        
+        
+    </script>
+    
+    
+</body>    
+
+
+</html>
